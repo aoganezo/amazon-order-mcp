@@ -4,17 +4,24 @@ An MCP (Model Context Protocol) server that wraps the [amazon-orders](https://gi
 
 ## Installation
 
+Dependencies are pinned to exact versions and hashes in `uv.lock`, with a supply-chain
+cooldown (`[tool.uv] exclude-newer` in `pyproject.toml`). Install from the lockfile:
+
 ```bash
-git clone https://github.com/muness/amazon-order-mcp.git
+git clone https://github.com/aoganezo/amazon-order-mcp.git
 cd amazon-order-mcp
-pip install -e .
+uv sync --locked
 ```
 
-Or install dependencies directly:
+Or with pip, using the hash-pinned export:
 
 ```bash
-pip install "mcp[cli]>=1.2.0" "amazon-orders>=4.0.0" "python-dotenv>=1.0.0" "nest-asyncio>=1.6.0"
+python -m venv .venv
+.venv/bin/pip install --require-hashes -r requirements.lock
 ```
+
+To upgrade, bump `exclude-newer` and the `==` pins in `pyproject.toml`, review the
+changes, then run `uv lock && uv export --frozen --no-dev --no-emit-project --format requirements-txt -o requirements.lock`.
 
 ## Configuration
 
@@ -35,7 +42,7 @@ Add to your MCP config (`.mcp.json` or `claude_desktop_config.json`):
 {
   "mcpServers": {
     "amazon-orders": {
-      "command": "python",
+      "command": "/path/to/amazon-order-mcp/.venv/bin/python",
       "args": ["/path/to/amazon-order-mcp/amazon_order_mcp.py"],
       "env": {
         "AMAZON_USERNAME": "your-amazon-email@example.com",
