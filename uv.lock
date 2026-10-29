@@ -10,7 +10,7 @@ resolution-markers = [
 ]
 
 [options]
-exclude-newer = "2026-10-10T00:00:00Z"
+exclude-newer = "2026-10-22T00:00:00Z"
 
 [[package]]
 name = "amazon-order-mcp"
@@ -25,7 +25,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "amazon-orders", specifier = "==4.8.0" },
+    { name = "amazon-orders", specifier = "==4.10.0" },
     { name = "mcp", extras = ["cli"], specifier = "==1.30.0" },
     { name = "nest-asyncio", specifier = "==1.6.0" },
     { name = "python-dotenv", specifier = "==1.2.4" },
@@ -33,7 +33,7 @@ requires-dist = [
 
 [[package]]
 name = "amazon-orders"
-version = "4.8.0"
+version = "4.10.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -44,9 +44,9 @@ dependencies = [
     { name = "pyyaml" },
     { name = "requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/50/ed/c3b37ccd5dfca06b32f804f28821c28f2720ce91f4ea908ab3f93b5ff2df/amazon_orders-4.8.0.tar.gz", hash = "sha256:f62d4b533968fd5fd8c851fd9b4a6d0ad4b051ae2a6dfaa4dedb08d7bf48826b", size = 81902, upload-time = "2026-10-09T21:14:01.228Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f6/e6/1e7f7a69b7020a54a36347427e5afefeced48a5aab21312fc68abf3930ae/amazon_orders-4.10.0.tar.gz", hash = "sha256:4b9f82213f6ab72137459d7d4f87e19c6d1286704ba3b21d6df0d2766a8dd2bf", size = 105411, upload-time = "2026-10-21T21:53:52.181Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/6e/3c/f770f32e9849a60a208b93ee51e15fb5fea1838d9f5d769341d9000d26e7/amazon_orders-4.8.0-py3-none-any.whl", hash = "sha256:7a9a01db09e640f80ca9694650fa2cc5ee159bda3022580006b317b7bebe9897", size = 85342, upload-time = "2026-10-09T21:13:59.952Z" },
+    { url = "https://files.pythonhosted.org/packages/9c/4a/c21975869d42348d8d5b3d650a1636ec86bceacfbedd584dbb2820709d39/amazon_orders-4.10.0-py3-none-any.whl", hash = "sha256:2a0eaa15c32682471eb85cbf92f36570a2b0737210908e3baeaef396849955a4", size = 110717, upload-time = "2026-10-21T21:53:50.664Z" },
 ]
 
 [[package]]

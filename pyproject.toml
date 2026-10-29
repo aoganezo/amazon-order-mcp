@@ -5,7 +5,7 @@ description = "MCP server wrapper for amazon-orders library"
 requires-python = ">=3.10"
 dependencies = [
     "mcp[cli]==1.30.0",
-    "amazon-orders==4.8.0",
+    "amazon-orders==4.10.0",
     "python-dotenv==1.2.4",
     "nest-asyncio==1.6.0",
 ]
@@ -20,4 +20,4 @@ build-backend = "hatchling.build"
 [tool.uv]
 # Supply-chain cooldown: ignore anything published to PyPI after this date.
 # Bump deliberately (and re-review) when you want to upgrade.
-exclude-newer = "2026-10-10T00:00:00Z"
+exclude-newer = "2026-10-22T00:00:00Z"
